@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Del funeral al cónclave: ¿qué pasa tras la muerte del papa Francisco y cuáles son las fechas clave? | InfoNoticias</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f0f0;
+        }
+        
+        header {
+            background-color: #ffcc00;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .menu-btn, .search-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .auth-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .subscribe-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 500px;
+            background-image: url('/api/placeholder/1200/500');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 40px 20px 20px;
+            color: white;
+        }
+        
+        .category-tag {
+            background-color: transparent;
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .article-title {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .article-content {
+            background-color: white;
+            padding: 30px;
+        }
+        
+        .article-summary {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .article-body {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .article-body p {
+            margin-bottom: 20px;
+        }
+        
+        .article-image {
+            margin: 20px 0;
+        }
+        
+        .article-image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .article-image figcaption {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .related-links {
+            list-style-type: none;
+        }
+        
+        .related-links li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .related-links li:before {
+            content: ">";
+            color: #0066cc;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        .related-links a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .sidebar-section {
+            background-color: white;
+            padding: 20px;
+        }
+        
+        .sidebar-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .news-item {
+            display: flex;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .news-item-image {
+            width: 80px;
+            height: 80px;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .news-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .news-item-content {
+            flex-grow: 1;
+        }
+        
+        .news-item-title {
+            font-size: 16px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .news-item-title a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .news-item-title a:hover {
+            color: #0066cc;
+        }
+        
+        .ad-box {
+            background-color: #e5e5e5;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .ad-box img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-image {
+                height: 300px;
+            }
+            
+            .article-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <button class="menu-btn">☰</button>
+            <button class="search-btn">🔍</button>
+            <a href="#" class="logo">InfoNoticias</a>
+            <div>
+                <button class="auth-btn">INICIAR SESIÓN</button>
+                <button class="subscribe-btn">SUSCRÍBETE</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="hero-image">
+        <div class="hero-overlay">
+            <div class="category-tag">ACTUALIDAD</div>
+            <h1 class="article-title">Del funeral al cónclave: ¿qué pasa tras la muerte del papa Francisco y cuáles son las fechas clave?</h1>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="article-content">
+            <div class="article-summary">
+                El sumo pontífice de la Iglesia Católica estableció algunos cambios para sus exequias. Tras su deceso se realiza el rito solemne de la constatación de la muerte y la deposición del cuerpo. En paralelo, se alistan los detalles para la elección de su sucesor
+            </div>
+            
+            <div class="article-body">
+                <p>Tras la confirmación del deceso del papa Francisco, informa la agencia <a href="#">Aci Prensa</a>, se debe realizar el rito solemne de la constatación de la muerte y la deposición del cuerpo en el ataúd, conforme al <em>Ordo Exsequiarum Romani Pontificis</em>.</p>
+                
+                <figure class="article-image">
+                    <img src="/api/placeholder/800/500" alt="Kevin Joseph Farrell">
+                    <figcaption>Kevin Joseph Farrell es el camarlengo, quien tendrá a su cargo la dirección del Vaticano y las actividades de exequias y del cónclave. (Foto: AFP)</figcaption>
+                </figure>
+                
+                <p>Esto se realizará durante la noche del lunes 21 y es presidido por el Cardenal Camarlengo, el monseñor Kevin Joseph Farrell, en la Capilla de la residencia de Francisco, la Casa Santa Marta del Vaticano. Para esta actividad participan los familiares y autoridades del Vaticano. Este ritual ha sido confirmado por la Oficina de Celebraciones Litúrgicas.</p>
+                
+                <p>El funeral del papa Francisco tendrá lugar el sábado, siguiendo las instrucciones que el propio pontífice dejó sobre sus exequias. A diferencia de sus predecesores, Francisco optó por una ceremonia más sencilla pero igualmente solemne, manteniendo la esencia de la tradición pero con algunos cambios significativos que reflejan su visión de una Iglesia más cercana y austera.</p>
+                
+                <p>Una misa por el papa Francisco se celebrará el miércoles en la iglesia del Santo Sepulcro de Jerusalén, un gesto simbólico que destaca la importancia que el pontífice dio a Tierra Santa durante su papado.</p>
+                
+                <p>Después del funeral comenzarán los preparativos para el cónclave, la reunión de cardenales que elegirá al nuevo papa. Este proceso sigue reglas estrictas establecidas por siglos de tradición y modificadas por los pontífices a lo largo de la historia.</p>
+                
+                <h3>Fechas clave del proceso</h3>
+                
+                <ul>
+                    <li><strong>Lunes 21:</strong> Constatación oficial del fallecimiento</li>
+                    <li><strong>Martes a viernes:</strong> Capilla ardiente en la Basílica de San Pedro</li>
+                    <li><strong>Sábado:</strong> Funeral solemne en la Plaza de San Pedro</li>
+                    <li><strong>Novenario:</strong> Nueve días de luto oficial</li>
+                    <li><strong>Después del novenario:</strong> Inicio del cónclave para elegir al sucesor</li>
+                </ul>
+                
+                <p>El presidente de Guatemala destacó la "vocación por los pobres" del papa Francisco, recordando su constante preocupación por los más necesitados y su llamado a una Iglesia que priorice a los marginados.</p>
+                
+                <p>Una vez finalizado el cónclave y elegido el nuevo papa, se realizará la tradicional fumata blanca desde la Capilla Sixtina, anunciando al mundo que la Iglesia Católica tiene un nuevo líder espiritual.</p>
+            </div>
+            
+            <div class="related-links">
+                <h3>Noticias relacionadas</h3>
+                <ul>
+                    <li><a href="#">Una misa por el papa Francisco se celebrará el miércoles en la iglesia del Santo Sepulcro de Jerusalén</a></li>
+                    <li><a href="#">Presidente de Guatemala destaca "vocación por los pobres" del papa Francisco</a></li>
+                    <li><a href="#">Los cambios que introdujo Francisco en el protocolo para sus exequias</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">PARA SUSCRIPTORES</h3>
+                
+                <div class="news-item">
+                    <div class="news-item-image">
+                        <img src="/api/placeholder/80/80" alt="Vargas Llosa">
+                    </div>
+                    <div class="news-item-content">
+                        <h4 class="news-item-title"><a href="#">Del cadete Vargas Llosa al cronista en España 82, de amigo de García Márquez a candidato presidencial</a></h4>
+                    </div>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-item-image">
+                        <img src="/api/placeholder/80/80" alt="Papa Francisco">
+                    </div>
+                    <div class="news-item-content">
+                        <h4 class="news-item-title"><a href="#">Papa Francisco: el Pontífice devoto de Maradona que aceptaba llamar 'Dios' a Messi, su ídolo</a></h4>
+                    </div>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-item-image">
+                        <img src="/api/placeholder/80/80" alt="Gian Marco">
+                    </div>
+                    <div class="news-item-content">
+                        <h4 class="news-item-title"><a href="#">"Tenía unos dolores que me moría": Gian Marco revela el vía crucis de su hospitalización</a></h4>
+                    </div>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-item-image">
+                        <img src="/api/placeholder/80/80" alt="Hermano de Nadine Heredia">
+                    </div>
+                    <div class="news-item-content">
+                        <h4 class="news-item-title"><a href="#">Hermano de Nadine Heredia también con orden de captura: El papel de Ilan Heredia</a></h4>
+                    </div>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-item-image">
+                        <img src="/api/placeholder/80/80" alt="Papa Francisco">
+                    </div>
+                    <div class="news-item-content">
+                        <h4 class="news-item-title"><a href="#">El legado del Papa Francisco: siete películas, series y libros para entender su huella en el mundo</a></h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ad-box">
+                <p>PUBLICIDAD</p>
+                <img src="/api/placeholder/300/250" alt="Publicidad">
+                <p>¡Cantidad de ofertas hay!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
